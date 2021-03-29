@@ -2076,6 +2076,10 @@ fieldset[disabled] .button {
   font-style: italic;
 }
 
+.content p {
+    color: #111    
+}
+
 .content pre {
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
