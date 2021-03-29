@@ -21,7 +21,6 @@ transform: translateX(-50%);
 .is-active {
 display: initial;
 color: #138a1f;
-background-color: black;
 color
 }
 
