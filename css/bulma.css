@@ -1807,8 +1807,8 @@ fieldset[disabled] .button {
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   border-radius: 100px;
   text-align: center;
   vertical-align: center;
