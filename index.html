@@ -70,144 +70,151 @@
             <div class="tab-pane" id="pane-2">
                 <div class="content">
                     <div class="buttons">
-                        <a class="button is-primary" href="#education">Education</a>
-                        <a class="button is-primary" href="#internships">Internships</a>
-                        <a class="button is-primary" href="#organizations">Organizations</a>
-                        <a class="button is-primary" href="#teaching">Teaching</a>
+                        <a class="button is-primary" onclick="showdiv_resume('education')">Education</a>
+                        <a class="button is-primary" onclick="showdiv_resume('work-experience')">Work Experience</a>
+                        <a class="button is-primary" onclick="showdiv_resume('organizations')">Organizations</a>
+                        <a class="button is-primary" onclick="showdiv_resume('teaching')">Teaching</a>
                     </div>
-
-                    <h1 id="education">Education</h1>
-                    <div class="columns">
-                        <div class="column is-one-quarter">
-                            <figure class="image">
-                                <img src="img/logos/stanford.png"
-                                    alt="Stanford University logo." class="cent">
-                            </figure>
-                        </div>
-                        <div class="column">
-                            <h3><i>BS, Electrical Engineering</i> @ Stanford University</h3>
-                            <h6>September 2019 - June 2022 | Stanford, CA</h6>
-                            <ul>
-                                <li> GPA: 4.30/4.00 (major); 4.22/4.00 (cumulative) </li>
-                                <li> EE Hardware and Software Systems Track</li>
-                                <li> Music Minor (Sound Production + Music Theory)</li>
-                                <li> Selected courses:
-                                    <ul>
-                                        <li><b>AA 274A</b>: Principles of Robot Autonomy I (<a href="https://github.com/parthiv-krishna/AA274A-Final-Project/" target="_blank">Final Project GitHub</a>)</li>
-                                        <li><b>CS 107E</b>: Computer Systems from the Ground Up</li>
-                                        <li><b>CS 111</b>: Operating Systems Principles</li>
-                                        <li><b>CS 229</b>: Machine Learning</li>
-                                        <li><b>EE 101A/B</b>: Circuits I/II</li>
-                                        <li><b>EE 102A/B</b>: Signal Processing and Linear Systems I/II</li>
-                                        <li><b>EE 103</b>: Introduction to Matrix Methods</li>
-                                        <li><b>EE 104</b>: Introduction to Machine Learning</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="columns">
-                        <div class="column is-one-quarter">
-                            <figure class="image">
-                                <img src="img/logos/minnetonka.jpg"
-                                    alt="Minnetonka logo." class="cent">
-                            </figure>
-                        </div>
-                        <div class="column">
-                            <h3><i>High School Diploma</i> @ Minnetonka High School</h3>
-                                <h6>September 2015 - June 2019 | Minnetonka, MN </h6>
+                    <div id="education" display="none">
+                        <h1>Education</h1>
+                        <div class="columns">
+                            <div class="column is-one-quarter">
+                                <figure class="image">
+                                    <img src="img/logos/stanford.png"
+                                        alt="Stanford University logo." class="cent">
+                                </figure>
+                            </div>
+                            <div class="column">
+                                <h3><i>BS, Electrical Engineering</i> @ Stanford University</h3>
+                                <h6>September 2019 - June 2022 | Stanford, CA</h6>
                                 <ul>
-                                    <li> Summa Cum Laude. GPA: 4.70/4.00 (weighted); 4.00/4.00 (unweighted). </li>
-                                    <li> Platinum Bilingual Seal (French). </li>
-                                    <li> Activities: FIRST Team 3082 "Chicken Bot Pie", Alpine Ski Team, <br>
-                                        Science Olympiad, Science Bowl, Quiz Bowl, National Honor Society.</li>
+                                    <li> GPA: 4.30/4.00 (major); 4.22/4.00 (cumulative) </li>
+                                    <li> EE Hardware and Software Systems Track</li>
+                                    <li> Music Minor (Sound Production + Music Theory)</li>
+                                    <li> Selected courses:
+                                        <ul>
+                                            <li><b>AA 274A</b>: Principles of Robot Autonomy I (<a href="https://github.com/parthiv-krishna/AA274A-Final-Project/" target="_blank">Final Project GitHub</a>)</li>
+                                            <li><b>CS 107E</b>: Computer Systems from the Ground Up</li>
+                                            <li><b>CS 111</b>: Operating Systems Principles</li>
+                                            <li><b>CS 229</b>: Machine Learning</li>
+                                            <li><b>EE 101A/B</b>: Circuits I/II</li>
+                                            <li><b>EE 102A/B</b>: Signal Processing and Linear Systems I/II</li>
+                                            <li><b>EE 103</b>: Introduction to Matrix Methods</li>
+                                            <li><b>EE 104</b>: Introduction to Machine Learning</li>
+                                        </ul>
+                                    </li>
                                 </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="columns">
-                        <div class="column is-one-quarter">
-                            <figure class="image">
-                                <img src="img/logos/umn.jpg"
-                                    alt="University of Minnesota logo." class="cent">
-                            </figure>
-                        </div>
-                        <div class="column">
-                            <h3><i>Non-Degree-Seeking Student</i> @ University of Minnesota, Twin Cities</h3>
-                            <h6>September 2017 - June 2019 | Minneapolis, MN</h6>
-                            <ul>
-                                <li> Dean's List. GPA: 4.00/4.00. Non-degree-seeking (PSEO) student during the final two years of high school.</li>
-                                <li> Selected courses (38 credits total completed):
+                        <div class="columns">
+                            <div class="column is-one-quarter">
+                                <figure class="image">
+                                    <img src="img/logos/minnetonka.jpg"
+                                        alt="Minnetonka logo." class="cent">
+                                </figure>
+                            </div>
+                            <div class="column">
+                                <h3><i>High School Diploma</i> @ Minnetonka High School</h3>
+                                    <h6>September 2015 - June 2019 | Minnetonka, MN </h6>
                                     <ul>
-                                    <li><b>CSCI 2011</b>: Discrete Structures of Computer Science</li>
-                                    <li><b>EE 2001</b> (and <b>2002</b>): Introduction to Circuits and Electronics (and lab)</li>
-                                    <li><b>MATH 4428</b>: Mathematical Modeling</li>
+                                        <li> Summa Cum Laude. GPA: 4.70/4.00 (weighted); 4.00/4.00 (unweighted). </li>
+                                        <li> Platinum Bilingual Seal (French). </li>
+                                        <li> Activities: FIRST Team 3082 "Chicken Bot Pie", Alpine Ski Team, <br>
+                                            Science Olympiad, Science Bowl, Quiz Bowl, National Honor Society.</li>
                                     </ul>
-                                </li>
-                            </ul>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-one-quarter">
+                                <figure class="image">
+                                    <img src="img/logos/umn.jpg"
+                                        alt="University of Minnesota logo." class="cent">
+                                </figure>
+                            </div>
+                            <div class="column">
+                                <h3><i>Non-Degree-Seeking Student</i> @ University of Minnesota, Twin Cities</h3>
+                                <h6>September 2017 - June 2019 | Minneapolis, MN</h6>
+                                <ul>
+                                    <li> Dean's List. GPA: 4.00/4.00. Non-degree-seeking (PSEO) student during the final two years of high school.</li>
+                                    <li> Selected courses (38 credits total completed):
+                                        <ul>
+                                        <li><b>CSCI 2011</b>: Discrete Structures of Computer Science</li>
+                                        <li><b>EE 2001</b> (and <b>2002</b>): Introduction to Circuits and Electronics (and lab)</li>
+                                        <li><b>MATH 4428</b>: Mathematical Modeling</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 
-                    <h1 id="internships">Internships</h1>
-                    <h3><i>Software Engineering Intern (Perception and Autonomy)</i> @ Parallel Systems</h3>
-                    <h6>upcoming | Mountain View, CA</h6>
-                    <ul>
-                        <li> I'm excited to join the Parallel Systems team and work on cutting-edge perception and
-                            autonomy problems! </li>
-                    </ul>
+                    <div id="work-experience" display="none">
+                        <h1>Work Experience</h1>
+                        <h3><i>Software Engineering Intern (Perception and Autonomy)</i> @ Parallel Systems</h3>
+                        <h6>upcoming | Mountain View, CA</h6>
+                        <ul>
+                            <li> I'm excited to join the Parallel Systems team and work on cutting-edge perception and
+                                autonomy problems! </li>
+                        </ul>
 
-                    <h3><i>R&D Data Science Intern</i> @ 3M (Corporate Research Systems Lab)</h3>
-                    <h6>June 2020 - September 2020 | Maplewood, MN (remote)</h6>
-                    <ul>
-                        <li> Joined a fast-paced Scrum team alongside full-time 3M engineers to develop drone technology
-                            for internal use cases. </li>
-                        <li> Developed GPU-enabled CV program for drone-hosted NVIDIA Jetson Nano, enabling inference
-                            30x faster than before. </li>
-                        <li> Created interactive HoloLens 2 augmented reality app in Unity/C# for immersive
-                            visualization of drone data output. </li>
-                    </ul>
+                        <h3><i>R&D Data Science Intern</i> @ 3M (Corporate Research Systems Lab)</h3>
+                        <h6>June 2020 - September 2020 | Maplewood, MN (remote)</h6>
+                        <ul>
+                            <li> Joined a fast-paced Scrum team alongside full-time 3M engineers to develop drone technology
+                                for internal use cases. </li>
+                            <li> Developed GPU-enabled CV program for drone-hosted NVIDIA Jetson Nano, enabling inference
+                                30x faster than before. </li>
+                            <li> Created interactive HoloLens 2 augmented reality app in Unity/C# for immersive
+                                visualization of drone data output. </li>
+                        </ul>
+                    </div>
 
-                    <h1 id="organizations">Organizations</h1>
-                    <h3><i>Co-President</i> @ <a href="https://stanfordstudentrobotics.org/" target="_blank">Stanford Student Robotics</a></h3>
-                    <h6>January 2021 - present | Stanford, CA</h6>
-                    <ul>
-                        <li> Manage rapidly growing organization of ~60 members; organize remote recruitment efforts; secure $50k in grant funding. </li>
-                        <li> Lead ~10-person team in development of wheeled/legged robot, “Hopper,” a control algorithms development platform. </li>
-                        <li> As Extreme Mobility Team Member (September 2019 - December 2020):
-                            <ul>
-                                <li> Collaborated on a low-cost open-source quadruped robot, “<a href="https://stanfordstudentrobotics.org/pupper" target="_blank">Pupper</a>”, designed as a for education and hobbyists. </li>
-                                <li> Developed power/signal transmission PCB and autonomous navigation/mapping software on NVIDIA Jetson Nano. </li>
-                                <li> Presented and demonstrated the project to industry experts and the public at the 2020 TechCrunch Robotics+AI conference. </li>
-                            </ul>
-                        </li>   
-                    </ul>
+                    <div id="organizations" display="none">
+                        <h1>Organizations</h1>
+                        <h3><i>Co-President</i> @ <a href="https://stanfordstudentrobotics.org/" target="_blank">Stanford Student Robotics</a></h3>
+                        <h6>January 2021 - present | Stanford, CA</h6>
+                        <ul>
+                            <li> Manage rapidly growing organization of ~60 members; organize remote recruitment efforts; secure $50k in grant funding. </li>
+                            <li> Lead ~10-person team in development of wheeled/legged robot, “Hopper,” a control algorithms development platform. </li>
+                            <li> As Extreme Mobility Team Member (September 2019 - December 2020):
+                                <ul>
+                                    <li> Collaborated on a low-cost open-source quadruped robot, “<a href="https://stanfordstudentrobotics.org/pupper" target="_blank">Pupper</a>”, designed as a for education and hobbyists. </li>
+                                    <li> Developed power/signal transmission PCB and autonomous navigation/mapping software on NVIDIA Jetson Nano. </li>
+                                    <li> Presented and demonstrated the project to industry experts and the public at the 2020 TechCrunch Robotics+AI conference. </li>
+                                </ul>
+                            </li>   
+                        </ul>
 
-                    <h3><i>President and Sound Engineer</i> @ <a href="https://stanfordharmonics.com" target="_blank">Stanford Harmonics A Cappella</a></h3>
-                    <h6>May 2020 - present | Stanford, CA</h6>
-                    <ul>
-                        <li> Manage remote recording projects, rehearsals, and planning for an upcoming album. </li>
-                        <li> Secure $30k in grant funding for annual expenses and sound equipment.</li> 
-                        <li> Mix audio for remote recording projects in Pro Tools. </li>   
-                        <li> Member since September 2019. </li>
-                    </ul>
+                    
+                        <h3><i>President and Sound Engineer</i> @ <a href="https://stanfordharmonics.com" target="_blank">Stanford Harmonics A Cappella</a></h3>
+                        <h6>May 2020 - present | Stanford, CA</h6>
+                        <ul>
+                            <li> Manage remote recording projects, rehearsals, and planning for an upcoming album. </li>
+                            <li> Secure $30k in grant funding for annual expenses and sound equipment.</li> 
+                            <li> Mix audio for remote recording projects in Pro Tools. </li>   
+                            <li> Member since September 2019. </li>
+                        </ul>
+                    </div>
 
-                    <h1 id="teaching">Teaching</h1>
-                    <h3><i>Computer Science Section Leader</i> @ Stanford University</h3>
-                    <h6>September 2020 - present | Stanford, CA (remote)</h6>
-                    <ul>
-                        <li> Lead a section of 10-15 students in CS106A: Programming Methodologies (Python-based); reinforce material from lecture. </li>
-                        <li> Assist students with conceptual questions and debugging; provide assignment feedback in interactive grading sessions. </li>
-                        <li> Course grader for CS106L: Standard C++ Programming; deliver detailed and personalized comments on submissions. </li>
-                    </ul>
+                    <div id="teaching">
+                        <h1>Teaching</h1>
+                        <h3><i>Computer Science Section Leader</i> @ Stanford University</h3>
+                        <h6>September 2020 - present | Stanford, CA (remote)</h6>
+                        <ul>
+                            <li> Lead a section of 10-15 students in CS106A: Programming Methodologies (Python-based); reinforce material from lecture. </li>
+                            <li> Assist students with conceptual questions and debugging; provide assignment feedback in interactive grading sessions. </li>
+                            <li> Course grader for CS106L: Standard C++ Programming; deliver detailed and personalized comments on submissions. </li>
+                        </ul>
 
-                    <h3><i>Math and Physics Tutor</i> @ Stanford University</h3>
-                    <h6>January 2020 - June 2020 | Stanford, CA</h6>
-                    <ul>
-                        <li> Assisted students in 1-on-1 appointments; provided individualized attention to support learning and build confidence. </li>
-                        <li>Topics covered: single/multi-variable calculus, linear algebra, differential equations, introductory physics (mechanics/E&M).</li>   
-                    </ul>
-
+                        <h3><i>Math and Physics Tutor</i> @ Stanford University</h3>
+                        <h6>January 2020 - June 2020 | Stanford, CA</h6>
+                        <ul>
+                            <li> Assisted students in 1-on-1 appointments; provided individualized attention to support learning and build confidence. </li>
+                            <li>Topics covered: single/multi-variable calculus, linear algebra, differential equations, introductory physics (mechanics/E&M).</li>   
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="tab-pane" id="pane-3">
@@ -281,6 +288,7 @@
     </section>
     <script src="js/bulma.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/showdiv.js"></script>
 </body>
 
 </html>
