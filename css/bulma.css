@@ -1803,6 +1803,19 @@ fieldset[disabled] .button {
   padding-right: calc(1em + 0.25em);
 }
 
+.button.is-floating {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 100px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 1.6rem;
+  box-shadow: 0 .0625em .125em rgba(10,10,10,.05);z-index:3
+}
+
 .buttons {
   align-items: center;
   display: flex;
