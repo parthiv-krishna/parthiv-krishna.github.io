@@ -4,7 +4,7 @@ function showdiv_resume(divName) {
 }
 
 function showdiv_projects(divName) {
-    var divs = ["drone-research", "pupper", "hopper", "cs107e", "frc"];
+    var divs = ["drone-research", "fpga-synth", "hopper", "cs107e", "frc"];
     showdiv(divName, divs);
 }
 

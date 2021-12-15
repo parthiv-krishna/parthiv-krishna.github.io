@@ -89,7 +89,7 @@
                                 <h3>Stanford University</h3>
                                 <h6>September 2019 - June 2022 | Stanford, CA</h6>
                                 <ul>
-                                    <li> BS, Electrical Engineering. GPA: 4.18/4.00</li>
+                                    <li> BS, Electrical Engineering. GPA: 4.19/4.00</li>
                                     <li> EE Hardware and Software Systems Track</li>
                                     <li> Music Minor (Sound Production + Music Theory)</li>
                                     <li> Selected courses:
@@ -102,7 +102,7 @@
                                             <li><b>EE 101A/B</b>: Circuits I/II</li>
                                             <li><b>EE 102A/B</b>: Signal Processing and Linear Systems I/II</li>
                                             <li><b>EE 104</b>: Introduction to Machine Learning</li>
-                                            <li><b>EE 108</b>: Digital Systems Design</li>
+                                            <li><b>EE 108</b>: Digital Systems Design (<a href="pdf/EE 108 Final Report PYNQ Board.pdf" target="_new">Final Project Paper</a>)</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -279,64 +279,14 @@
             <div class="tab-pane" id="pane-3">
                 <div class="content">
                     <div class="buttons is-centered">
-                        <div class="button is-primary" onclick="showdiv_projects('hopper')">Hopper</div>
                         <div class="button is-primary" onclick="showdiv_projects('drone-research')">Drone Research</div>
-                        <div class="button is-primary" onclick="showdiv_projects('pupper')">Pupper</div>
+                        <div class="button is-primary" onclick="showdiv_projects('fpga-synth')">FPGA Synthesizer</div>
+                        <div class="button is-primary" onclick="showdiv_projects('hopper')">Hopper</div>
                         <div class="button is-primary" onclick="showdiv_projects('cs107e')">CS 107e</div>
                         <div class="button is-primary" onclick="showdiv_projects('frc')">FRC</div>
                     </div>
 
-                    <div id="hopper" style="display: block;">
-                        <h1>Hopper</h1>
-                        <div class="columns is-multiline is-vcentered">
-                            <div class="column is-two-thirds">
-                                <p> I am leading the design and development of Hopper, a small wheeled biped. As a project within the Extreme Mobility team of Stanford Robotics,
-                                    we hope to benchmark various control algorithms. This project has been primarily remote, so progress has been somewhat slow, but we have done
-                                    a lot of design and preliminary software work via physics simulation.
-                                </p>
-                                <p> Additionally, as part of the course CS 229: Machine Learning, I worked on implementing reinforcement learning-based control for Hopper. 
-                                    Specifically, I developed a physics simulator using PyBullet, then trained two RL algorithms to control the robot in various scenarios, including
-                                    stable balancing, velocity control, and jumping onto a step.
-                                    <ul>
-                                        <li>DDPG: Deep Deterministic Policy Gradient. DDPG consists of a critic network and actor network. A copy of both networks are 
-                                            employed to calculate target values, and their weights are updated to slowly track those of the learned networks in order to increase stability.</li>
-                                        <li>SAC: Soft Actor-Critic. SAC also uses an actor network and a critic network, as the name suggests. In contrast to the deterministic actions selected by 
-                                            DDPG, SAC selects actions probabilistically. The goal of this algorithm is to maximize not only the reward but also the entropy of the policy in order to encourage exploration.</li>
-                                    </ul>
-                                    We compared the results of the RL-based controllers to an LQR-based controller that my project partner developed, and found pretty positive results.
-                                    In addition, we found that both DDPG and SAC succeeded in learning policies that controller Hopper to jump onto a small box, which would be more or
-                                    less impossible to do with an optimal controller like LQR since Hopper loses contact/traction with the ground. 
-                                </p>
-                                <p> A paper with more details on our methods and results can be found here: (<a href="pdf/Hopper Reinforcement Learning-Based Control of a Wheeled Bipedal Robot.pdf" target="_new">Paper PDF</a>).</p>
-                            </div>
-                            <div class="column is-one-third">
-                                <figure class="image">
-                                    <img src="img/hopper/hopper_cadmodel.png"
-                                        alt="A render of the Hopper CAD model." class="cent">
-                                </figure>
-                            </div>
-                            <div class="column is-one-third">
-                                <figure class="image">
-                                    <img src="img/hopper/velocity_control_velocity.png"
-                                        alt="Results of velocity control for various algorithms." class="cent">
-                                </figure>
-                            </div>
-                            <div class="column is-one-third">
-                                <figure class="image">
-                                    <img src="img/hopper/jump_before.PNG"
-                                        alt="Hopper simulator, before jump." class="cent">
-                                </figure>
-                            </div>
-                            <div class="column is-one-third">
-                                <figure class="image">
-                                    <img src="img/hopper/jump_after.PNG"
-                                        alt="Hopper simulator, after jump." class="cent">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="drone-research" style="display: none;">
+                    <div id="drone-research" style="display: block;">
                         <h1>Drone Research</h1>
                         <div class="columns is-multiline is-vcentered">
                             <div class="column is-three-quarters">
@@ -394,8 +344,86 @@
                         </div>
                     </div>
 
-                    <div id="pupper" style="display: none;">
-                        <h1>Pupper</h1>
+                    <div id="fpga-synth" style="display: none;">
+                    <h1>FPGA Synthesizer</h1>
+                    <div class="columns is-multiline is-vcentered">
+                        <div class="column is-two-thirds">
+                            <p>For Stanford's class EE 108: Digital System Design, I worked on a final project with three teammates that 
+                            involved creating a synthesizer on an FPGA. We programmed all aspects, including audio output, video output,
+                            and button input, using Verilog. Features that we implemented included:
+                            </p>
+                            <ul>
+                                <li>4 programmable songs</li>
+                                <li>4 simultaneous notes</li>
+                                <li>4 instrument choices (harmonics + ADSR dynamics)</li>
+                                <li>Stereo effects: panning, phaser</li>
+                                <li>Visualize current waveform</li>
+                                <li>Visualize previous two, current, and next two notes on each track</li>
+                            </ul>     
+
+                            <p>Through the project, we gained a deeper understanding for aspects of digital design like combinational
+                            logic, sequential logic, timing, and pipelining. Our final paper can be found here: 
+                            (<a href="pdf/EE 108 Final Report PYNQ Board.pdf" target="_new">Paper PDF</a>).</p>
+
+                        </div>
+                        <div class="column is-one-third">
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/sIq7vSxdI0s" frameborder="0"></iframe>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    </div>
+
+                    <div id="hopper" style="display: none;">
+                        <h1>Hopper</h1>
+                        <div class="columns is-multiline is-vcentered">
+                            <div class="column is-two-thirds">
+                                <p> I am leading the design and development of Hopper, a small wheeled biped. As a project within the Extreme Mobility team of Stanford Robotics,
+                                    we hope to benchmark various control algorithms. This project has been primarily remote, so progress has been somewhat slow, but we have done
+                                    a lot of design and preliminary software work via physics simulation.
+                                </p>
+                                <p> Additionally, as part of the course CS 229: Machine Learning, I worked on implementing reinforcement learning-based control for Hopper. 
+                                    Specifically, I developed a physics simulator using PyBullet, then trained two RL algorithms to control the robot in various scenarios, including
+                                    stable balancing, velocity control, and jumping onto a step.
+                                    <ul>
+                                        <li>DDPG: Deep Deterministic Policy Gradient. DDPG consists of a critic network and actor network. A copy of both networks are 
+                                            employed to calculate target values, and their weights are updated to slowly track those of the learned networks in order to increase stability.</li>
+                                        <li>SAC: Soft Actor-Critic. SAC also uses an actor network and a critic network, as the name suggests. In contrast to the deterministic actions selected by 
+                                            DDPG, SAC selects actions probabilistically. The goal of this algorithm is to maximize not only the reward but also the entropy of the policy in order to encourage exploration.</li>
+                                    </ul>
+                                    We compared the results of the RL-based controllers to an LQR-based controller that my project partner developed, and found pretty positive results.
+                                    In addition, we found that both DDPG and SAC succeeded in learning policies that controller Hopper to jump onto a small box, which would be more or
+                                    less impossible to do with an optimal controller like LQR since Hopper loses contact/traction with the ground. 
+                                </p>
+                                <p> A paper with more details on our methods and results can be found here: (<a href="pdf/Hopper Reinforcement Learning-Based Control of a Wheeled Bipedal Robot.pdf" target="_new">Paper PDF</a>).</p>
+                            </div>
+                            <div class="column is-one-third">
+                                <figure class="image">
+                                    <img src="img/hopper/hopper_cadmodel.png"
+                                        alt="A render of the Hopper CAD model." class="cent">
+                                </figure>
+                            </div>
+                            <div class="column is-one-third">
+                                <figure class="image">
+                                    <img src="img/hopper/velocity_control_velocity.png"
+                                        alt="Results of velocity control for various algorithms." class="cent">
+                                </figure>
+                            </div>
+                            <div class="column is-one-third">
+                                <figure class="image">
+                                    <img src="img/hopper/jump_before.PNG"
+                                        alt="Hopper simulator, before jump." class="cent">
+                                </figure>
+                            </div>
+                            <div class="column is-one-third">
+                                <figure class="image">
+                                    <img src="img/hopper/jump_after.PNG"
+                                        alt="Hopper simulator, after jump." class="cent">
+                                </figure>
+                            </div>
+                        </div>
                     </div>
 
                     <div id="cs107e" style="display: none;">
